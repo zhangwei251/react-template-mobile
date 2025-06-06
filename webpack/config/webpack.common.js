@@ -6,9 +6,11 @@ const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin'); //
 const CopyPlugin = require('copy-webpack-plugin'); // 将已存在的单个文件或整个目录复制到生成目录
 const webpack = require('webpack');
 const paths = require('../paths');
+const path = require('path');
 const {isDevelopment, isProduction} = require('../env');
 const {imageInlineSizeLimit, imageBase64Path, shouldBase64FromFileEnd} = require('../conf');
-
+const faviconPath = path.join(paths.appPublic, 'favicon.ico');
+console.log('.....paths.appPublic', faviconPath);
 const cssLoaders = (importLoaders) => [
     // 执行顺序从后到前 less-loader -> postcss-loader -> css-loader -> style-loader/MiniCssExtractPlugin.loader
     isDevelopment ? 'style-loader' : MiniCssExtractPlugin.loader, // style-loader的作用就是将结果以style标签的方式插入DOM树中。style-loader将css-loader打包好的 CSS 代码以<style>标签的形式插入到 HTML 文件中
@@ -132,7 +134,8 @@ const config = {
         new HtmlWebpackPlugin({
             template: paths.appHtml,
             cache: true,
-            env: process.env.ENV || ''
+            env: process.env.ENV || '',
+            favicon: faviconPath // 确保路径正确
         }),
         new CopyPlugin({
             patterns: [
