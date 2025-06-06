@@ -2,12 +2,21 @@
 import React, {useState} from 'react';
 import {useNavigate} from 'react-router-dom';
 import './index.css';
-import {Button, Input} from 'antd-mobile';
+import {Button, Input, Modal} from 'antd-mobile';
 const Login = () => {
     const navigate = useNavigate();
     const [userEmail, setUserEmail] = useState('');
     const [userPass, setUserPass] = useState('');
     const handleSubmit = () => {
+        if (!userEmail || !userPass) {
+            Modal.alert({
+                content: '请随便填写邮箱&密码',
+                onConfirm: () => {
+                    console.log('Confirmed');
+                }
+            });
+            return;
+        }
         navigate('/Dashbord'); // 登录后跳转到dashboard
     };
 
