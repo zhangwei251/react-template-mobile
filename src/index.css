@@ -1,0 +1,169 @@
+/* 在线链接服务仅供平台体验和调试使用，平台不承诺服务的稳定性，企业客户需下载字体包自行发布使用并做好备份。 */
+@font-face {
+    font-family: 'ALIBBAREG';
+    font-weight: 400;
+    src: url('//at.alicdn.com/wf/webfont/ioYie7QLJX0m/DQngrpERm8HH.woff2') format('woff2'),
+        url('//at.alicdn.com/wf/webfont/ioYie7QLJX0m/FzOcSG5DsDPz.woff') format('woff');
+    font-display: swap;
+}
+/*
+    Remove all the styles of the "User-Agent-Stylesheet", except for the 'display' property
+    - The "symbol *" part is to solve Firefox SVG sprite bug
+ */
+*:where(:not(html, iframe, canvas, img, svg, video):not(svg *, symbol *)) {
+    all: unset;
+    display: revert;
+}
+
+/* Preferred box-sizing value */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Reapply the pointer cursor for anchor tags */
+a,
+button {
+    cursor: revert;
+}
+
+/* Remove list styles (bullets/numbers) */
+ol,
+ul,
+menu {
+    list-style: none;
+}
+
+/* For images to not be able to exceed their container */
+img {
+    max-width: 100%;
+}
+
+/* removes spacing between cells in tables */
+table {
+    border-collapse: collapse;
+}
+
+/* Safari - solving issue when using user-select:none on the <body> text input doesn't working */
+input,
+textarea {
+    -webkit-user-select: auto;
+}
+
+/* revert the 'white-space' property for textarea elements on Safari */
+textarea {
+    white-space: revert;
+}
+
+/* minimum style to allow to style meter element */
+meter {
+    -webkit-appearance: revert;
+    appearance: revert;
+}
+
+/* reset default text opacity of input placeholder */
+::placeholder {
+    color: unset;
+}
+
+/* fix the feature of 'hidden' attribute.
+ display:revert; revert to element instead of attribute */
+:where([hidden]) {
+    display: none;
+}
+
+/* revert for bug in Chromium browsers
+ - fix for the content editable attribute will work properly.
+ - webkit-user-select: auto; added for Safari in case of using user-select:none on wrapper element*/
+:where([contenteditable]:not([contenteditable='false'])) {
+    -moz-user-modify: read-write;
+    -webkit-user-modify: read-write;
+    overflow-wrap: break-word;
+    -webkit-line-break: after-white-space;
+    -webkit-user-select: auto;
+}
+
+/* apply back the draggable feature - exist only in Chromium and Safari */
+:where([draggable='true']) {
+    -webkit-user-drag: element;
+}
+.adm-capsule-tabs-content {
+    overflow: scroll;
+}
+.adm-capsule-tabs-tab {
+    background-color: #fff !important;
+    color: #c8c9cc !important;
+}
+.adm-capsule-tabs-tab-active {
+    background-color: #f2f2f4 !important;
+    border-radius: 8px !important;
+}
+
+/* src/styles/global.css */
+
+.login-container h2,
+.register-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.login-container form div,
+.register-container form div {
+    margin-bottom: 15px;
+}
+
+.login-container label,
+.register-container label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.login-container input,
+.register-container input {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+.login-container button,
+.register-container button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.login-container button:hover,
+.register-container button:hover {
+    background-color: #0056b3;
+}
+
+.error-message {
+    color: red;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.register-link,
+.login-link {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.register-link button,
+.login-link button {
+    background-color: transparent;
+    color: #007bff;
+    width: auto;
+    padding: 0;
+}
+
+.register-link button:hover,
+.login-link button:hover {
+    background-color: transparent;
+    text-decoration: underline;
+}

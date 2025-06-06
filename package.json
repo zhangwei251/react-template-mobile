@@ -71,8 +71,6 @@
         "@types/react": "^18.2.14",
         "@types/react-dom": "^18.2.6",
         "@types/webpack-env": "^1.18.1",
-        "@typescript-eslint/eslint-plugin": "^5.60.1",
-        "@typescript-eslint/parser": "^5.60.1",
         "autoprefixer": "^10.4.14",
         "babel-loader": "^9.1.2",
         "chalk": "4.1.2",
@@ -84,7 +82,6 @@
         "css-minimizer-webpack-plugin": "^5.0.1",
         "detect-port-alt": "^1.1.6",
         "env-cmd": "^10.1.0",
-        "eslint": "^8.43.0",
         "eslint-plugin-react": "^7.32.2",
         "eslint-plugin-react-hooks": "^4.6.0",
         "fork-ts-checker-webpack-plugin": "^8.0.0",
@@ -122,14 +119,19 @@
         "webpackbar": "^5.0.2"
     },
     "dependencies": {
+        "@ant-design/charts": "^2.3.0",
         "@phosphor-icons/react": "^2.0.10",
+        "antd-mobile": "^5.39.0",
         "axios": "^1.4.0",
         "axios-retry": "^3.5.1",
+        "echarts": "^5.6.0",
+        "echarts-for-react": "^3.0.2",
         "mobx": "^6.9.0",
         "mobx-react-lite": "^3.4.3",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
-        "react-router-dom": "^6.14.0"
+        "react-router-dom": "^6.14.0",
+        "rechart": "^0.0.1"
     },
     "volta": {
         "node": "18.16.0",

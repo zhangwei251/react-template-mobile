@@ -1,8 +1,9 @@
 import React from 'react';
-import {useRoutes} from 'react-router-dom';
+import { useRoutes } from 'react-router-dom';
 import Tab from '@/view/Tab';
 import routes from '@/router';
 import '@/styles/index.less';
+import './index.css'
 
 function App() {
     // 通过useRoutes配置实现路由管理

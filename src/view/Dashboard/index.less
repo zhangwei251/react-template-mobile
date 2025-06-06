@@ -1,13 +1,157 @@
-.dashboard-root {
-    padding-top: 70px;
-    text-align: center;
-    background: #222;
+.titleWrap {
+    padding-left: 15px;
+    padding-top: 12px;
+}
+.title1 {
+    font-family: 'ALIBBAREG';
+    /*你好！轻盈s12138， 你今天瘦了0.6kg！加油!*/
+    /** 文本1 */
+    font-size: 42px;
+    font-weight: 400;
+    letter-spacing: 0px;
+    line-height: 33px;
+    color: rgba(46, 50, 56, 1);
+}
+.title2 {
+    font-family: 'ALIBBAREG';
+    /*你好！轻盈s12138， 你今天瘦了0.6kg！加油!*/
+    /** 文本1 */
+    font-size: 24px;
+    font-weight: 400;
+    letter-spacing: 0px;
+    line-height: 33px;
+    color: rgba(46, 50, 56, 1);
+    margin-top: 10px;
+}
+.CartT {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+.CartText {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    span {
+        display: flex;
+        /** 文本1 */
+        font-size: 28px;
+        font-weight: 400;
+        letter-spacing: 0px;
+        line-height: 28px;
+        color: rgba(46, 50, 56, 1);
+    }
+    .value {
+        /** 文本1 */
+        font-size: 28px;
+        font-weight: 700;
+        letter-spacing: 0px;
+        line-height: 28x;
+        color: rgba(46, 50, 56, 1);
+        text-align: center;
+        vertical-align: top;
+        margin-bottom: 10px;
+    }
+}
+.CardList {
+    margin-top: 42px;
+    display: flex;
+    .card {
+        width: 33.33%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .title {
+            display: flex;
+            align-items: center;
+            /** 文本1 */
+            font-size: 22px;
+            font-weight: 400;
+            letter-spacing: 0px;
+            color: #abadb0;
+            text-align: left;
+            vertical-align: top;
 
-    & > span {
-        display: block;
-        width: 100%;
-        color: rgb(96 96 96);
-        font-weight: 800;
-        font-size: 110px;
+            .radio {
+                margin-right: 10px;
+                display: flex;
+                width: 12px; /* 圆的直径 */
+                height: 12px; /* 圆的直径 */
+                background-color: #3498db; /* 圆的颜色 */
+                border-radius: 50%; /* 关键属性，将正方形转换为圆形 */
+            }
+        }
+        .value {
+            font-size: 28px;
+            font-weight: 600;
+            color: #2e3238;
+            margin-top: 20px;
+            margin-bottom: 5px;
+        }
+        .subText {
+            display: flex;
+            align-items: center;
+            /** 文本1 */
+            font-size: 22px;
+            font-weight: 400;
+            letter-spacing: 0px;
+            color: #abadb0;
+            text-align: left;
+            vertical-align: top;
+        }
+    }
+}
+.today {
+    margin-top: 38px;
+    .title {
+        /*今日食谱*/
+        font-size: 22px;
+        font-weight: 600;
+        margin-left: 24px;
+    }
+}
+.todaycard1 {
+    position: relative;
+
+    width: 100%;
+    height: 310px;
+    .title {
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+}
+.todaywrap {
+    display: flex;
+    overflow: scroll;
+}
+.contentSwiper {
+    height: 340px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 48px;
+    user-select: none;
+    background-image: url(../../assets/111.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    margin-right: 20px;
+}
+.todyList {
+    margin-top: 38px;
+}
+.CardListContent {
+    .t {
+        font-size: 30px;
+        color: #2e3238;
+    }
+    .c {
+        font-size: 25px;
+        color: #b4b6b9;
     }
 }
