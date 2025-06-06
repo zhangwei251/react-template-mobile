@@ -10,7 +10,7 @@ import {pokemonOptions} from '@/interface/http';
  * @function get
  * @description 请求测试
  */
-
+//
 export function fetchPokemon(data: pokemonOptions) {
     return http({
         url: ' https://pokeapi.co/api/v2/pokemon',
