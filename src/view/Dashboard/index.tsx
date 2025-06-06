@@ -88,7 +88,7 @@ const Dashboard = () => {
                     </CapsuleTabs.Tab>
                 </CapsuleTabs>
             </div>
-            <div className='today'>
+            <div className='todayboy'>
                 <div className='title'>膳食构造</div>
                 <div className='todyList'>
                     <List header=''>
