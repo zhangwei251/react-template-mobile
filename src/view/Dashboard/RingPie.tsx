@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactECharts from 'echarts-for-react';
-
-const GaugeChart = (pross: any) => {
+// eslint-disable-next-line
+const GaugeChart = () => {
     const option = {
         series: [
             {
@@ -42,7 +42,7 @@ const GaugeChart = (pross: any) => {
                 detail: {
                     show: false
                 },
-                data: [{ value: 100 * 0.4 }] // Proportional value
+                data: [{value: 100 * 0.4}] // Proportional value
             },
             {
                 type: 'gauge',
@@ -83,7 +83,7 @@ const GaugeChart = (pross: any) => {
                 detail: {
                     show: false
                 },
-                data: [{ value: 100 * 0.5 }] // Example value
+                data: [{value: 100 * 0.5}] // Example value
             },
             {
                 type: 'gauge',
@@ -127,18 +127,12 @@ const GaugeChart = (pross: any) => {
                     color: 'yellow',
                     show: false // 显示详细信息
                 },
-                data: [{ value: 100 * 0.7 }] // Example value
-
+                data: [{value: 100 * 0.7}] // Example value
             }
         ]
     };
 
-    return (
-        <ReactECharts
-            option={option}
-            style={{ height: '245px', width: '245px' }}
-        />
-    );
+    return <ReactECharts option={option} style={{height: '245px', width: '245px'}} />;
 };
 
 export default GaugeChart;

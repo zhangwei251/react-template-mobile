@@ -1,15 +1,11 @@
 // src/view/Register.tsx
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import './index.css'
-
-import { Input } from 'antd-mobile';
+import React, {useState} from 'react';
+import {useNavigate} from 'react-router-dom';
+import './index.css';
 
 const Register = () => {
-    const [username, setUsername] = useState('');
-    const [password, setPassword] = useState('');
-    const [confirmPassword, setConfirmPassword] = useState('');
-    const [error, setError] = useState('');
+    const [username] = useState('');
+    const [password] = useState('');
     const navigate = useNavigate();
 
     const handleSubmit = (e: React.FormEvent) => {
@@ -21,7 +17,7 @@ const Register = () => {
     };
 
     return (
-        <div className="register-container">
+        <div className='register-container'>
             <div className='content'>
                 <div className='rg' onClick={handleSubmit}></div>
                 <div className='o'>
@@ -29,7 +25,6 @@ const Register = () => {
                     <div className='v'></div>
                 </div>
             </div>
-
         </div>
     );
 };

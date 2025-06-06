@@ -1,18 +1,15 @@
 /* eslint-disable */
-import React, { useEffect, useState } from 'react';
-import { NavLink, useLocation, useNavigate } from 'react-router-dom';
+import React, {useEffect, useState} from 'react';
+import {useLocation, useNavigate} from 'react-router-dom';
 import './index.less';
-import {
-    MessageOutline,
-
-} from 'antd-mobile-icons';
-import { Badge, TabBar } from 'antd-mobile';
+import {MessageOutline} from 'antd-mobile-icons';
+import {Badge, TabBar} from 'antd-mobile';
 const Tab = () => {
     const navigate = useNavigate();
     const location = useLocation();
     const [activeKey, setActiveKey] = useState('/Dashbord'); // 设置默认激活项
 
-    const Icon1 = (props: { active: any; }) => {
+    const Icon1 = (props: {active: any}) => {
         return (
             <svg
                 // @ts-ignore
@@ -32,7 +29,7 @@ const Tab = () => {
             </svg>
         );
     };
-    const Icon2: any = (props: { active: any; }) => {
+    const Icon2: any = (props: {active: any}) => {
         return (
             <svg
                 // @ts-ignore
@@ -58,7 +55,7 @@ const Tab = () => {
         );
     };
 
-    const Icon3 = (props) => {
+    const Icon3 = (props: {active: any}) => {
         return (
             <svg
                 // @ts-ignore
@@ -79,7 +76,7 @@ const Tab = () => {
             </svg>
         );
     };
-    const Icon5 = (props: { active: any; }) => {
+    const Icon5 = (props: {active: any}) => {
         return (
             <svg
                 // @ts-ignore
@@ -102,7 +99,7 @@ const Tab = () => {
     const setRouteActive = (value: string) => {
         navigate(value);
         setActiveKey(value);
-    }
+    };
     useEffect(() => {
         // 从location.pathname获取当前路由
         console.log('......', location);
@@ -110,7 +107,6 @@ const Tab = () => {
     }, [location.pathname]);
     const tabs = [
         {
-
             key: '/MyPage',
             icon: (active: boolean) => <Icon1 active={active} />,
             badge: Badge.dot
@@ -143,7 +139,6 @@ const Tab = () => {
             <TabBar onChange={setRouteActive} activeKey={activeKey}>
                 {tabs.map((item) => (
                     <TabBar.Item key={item.key} icon={item.icon} />
-
                 ))}
             </TabBar>
         </div>

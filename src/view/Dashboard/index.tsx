@@ -1,36 +1,32 @@
 import React from 'react';
-import { observer } from 'mobx-react-lite';
+import {observer} from 'mobx-react-lite';
 import './index.less';
-import RingChart from './RingPie'
-import { CapsuleTabs, List, Space, Swiper } from 'antd-mobile';
-
-import {
-    UnorderedListOutline,
-    PayCircleOutline,
-    SetOutline,
-} from 'antd-mobile-icons'
-const list = [{
-    title: "蛋白质",
-    value: 123,
-    subText: "每356"
-}, {
-    title: "碳水化合物",
-    value: 71,
-    subText: "每152"
-}, {
-    title: "脂肪",
-    value: 72,
-    subText: "每96"
-}]
+import RingChart from './RingPie';
+import {CapsuleTabs, List, Space, Swiper} from 'antd-mobile';
+const list = [
+    {
+        title: '蛋白质',
+        value: 123,
+        subText: '每356'
+    },
+    {
+        title: '碳水化合物',
+        value: 71,
+        subText: '每152'
+    },
+    {
+        title: '脂肪',
+        value: 72,
+        subText: '每96'
+    }
+];
 const Dashboard = () => {
-    const colors = ['#ace0ff', '#bcffbd', '#e4fabd', '#ffcfac']
-    const items = colors.map((color, index) => (
+    const colors = ['#ace0ff', '#bcffbd', '#e4fabd', '#ffcfac'];
+    const items = colors.map((index) => (
         <Swiper.Item key={index}>
-            <div className="contentSwiper" >
-            </div>
+            <div className='contentSwiper'></div>
         </Swiper.Item>
-    ))
-
+    ));
 
     return (
         <div className='dashboard-root-wwww'>
@@ -39,19 +35,24 @@ const Dashboard = () => {
                 <div className='title2'>你今天瘦了0.6KG！加油</div>
             </div>
             <div className='CartT'>
-                <RingChart value={1220} total={1011} />
-                <div className="CartText">
+                <RingChart />
+                <div className='CartText'>
                     <span className='value'>1220</span>
                     <span>每1915kcal</span>
                 </div>
             </div>
-            <div className="CardList ">
+            <div className='CardList '>
                 {list.map((item, idex) => {
-                    return <div className='card' key={idex}>
-                        <div className='title'> <span className='radio'></span> {item.title}</div>
-                        <div className='value'>{item.value}</div>
-                        <div className='subText'>{item.subText}</div>
-                    </div>
+                    return (
+                        <div className='card' key={idex}>
+                            <div className='title'>
+                                {' '}
+                                <span className='radio'></span> {item.title}
+                            </div>
+                            <div className='value'>{item.value}</div>
+                            <div className='subText'>{item.subText}</div>
+                        </div>
+                    );
                 })}
             </div>
             <div className='today'>
@@ -91,26 +92,26 @@ const Dashboard = () => {
                 <div className='title'>膳食构造</div>
                 <div className='todyList'>
                     <List header=''>
-                        <List.Item onClick={() => { }}>
-                            <div className="CardListContent">
+                        <List.Item onClick={() => {}}>
+                            <div className='CardListContent'>
                                 <div className='t'>早饭</div>
                                 <div className='c'>500-530kcal</div>
                             </div>
                         </List.Item>
-                        <List.Item onClick={() => { }}>
-                            <div className="CardListContent">
+                        <List.Item onClick={() => {}}>
+                            <div className='CardListContent'>
                                 <div className='t'>甜品</div>
                                 <div className='c'>500-530kcal</div>
                             </div>
                         </List.Item>
-                        <List.Item onClick={() => { }}>
-                            <div className="CardListContent">
+                        <List.Item onClick={() => {}}>
+                            <div className='CardListContent'>
                                 <div className='t'>午饭</div>
                                 <div className='c'>500-530kcal</div>
                             </div>
                         </List.Item>
-                        <List.Item onClick={() => { }}>
-                            <div className="CardListContent">
+                        <List.Item onClick={() => {}}>
+                            <div className='CardListContent'>
                                 <div className='t'>甜品</div>
                                 <div className='c'>500-530kcal</div>
                             </div>
